@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/CurrencyScraper.Api/CurrencyScraper.Api.csproj" />
+    <Project Path="src/CurrencyScraper.Application/CurrencyScraper.Application.csproj" />
+    <Project Path="src/CurrencyScraper.Domain/CurrencyScraper.Domain.csproj" />
+    <Project Path="src/CurrencyScraper.Infrastructure/CurrencyScraper.Infrastructure.csproj" />
+    <Project Path="src/CurrencyScraper.Worker/CurrencyScraper.Worker.csproj" />
+  </Folder>
+</Solution>

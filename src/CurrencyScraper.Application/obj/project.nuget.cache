@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "wMfWGWh3nbk=",
+  "success": true,
+  "projectFilePath": "C:\\Fontes\\CurrencyScraper\\CurrencyScraper\\src\\CurrencyScraper.Application\\CurrencyScraper.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fmosk\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\fmosk\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

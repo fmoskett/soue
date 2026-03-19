@@ -1,0 +1,6 @@
+@CurrencyScraper.Api_HostAddress = http://localhost:5196
+
+GET {{CurrencyScraper.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: currency-sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=YourStrong@Password123
+    ports:
+      - "1433:1433"
+
+  currency-api:
+    build:
+      context: .
+      dockerfile: src/CurrencyScraper.Api/Dockerfile
+    container_name: currency-api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=CurrencyDb;User Id=sa;Password=YourStrong@Password123;TrustServerCertificate=True;
+    ports:
+      - "5000:80"
+    depends_on:
+      - sqlserver
+
+  currency-worker:
+    build:
+      context: .
+      dockerfile: src/CurrencyScraper.Worker/Dockerfile
+    container_name: currency-worker
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=CurrencyDb;User Id=sa;Password=YourStrong@Password123;TrustServerCertificate=True;
+    depends_on:
+      - sqlserver
